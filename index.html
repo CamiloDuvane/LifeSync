@@ -1,0 +1,313 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeSync - Seu Assistente Pessoal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/study-mode.css">
+  <link rel="stylesheet" href="css/modes.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Login Screen -->
+    <div id="login-screen" class="screen active">
+      <h1>LifeSync</h1>
+      <div class="login-container">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Senha">
+        <button onclick="login()">Entrar</button>
+        <button onclick="signInWithGoogle()" class="google-btn">
+          <svg class="google-icon" viewBox="0 0 24 24">
+            <path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032 s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2 C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z"/>
+          </svg>
+          Entrar com Google
+        </button>
+      </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="screen">
+      <nav>
+        <div class="user-info">
+          <img id="user-photo" src="" alt="User Photo">
+          <span id="user-name"></span>
+        </div>
+        <button onclick="logout()">Sair</button>
+      </nav>
+      
+      <div class="modes-grid">
+        <div class="mode-card" onclick="switchMode('study')">
+          <svg class="mode-icon study-icon" viewBox="0 0 24 24">
+            <path d="M12 3L1 9l11 6l9-4.91V17h2V9L12 3z"/>
+          </svg>
+          <h3>Modo Estudo</h3>
+        </div>
+
+        <div class="mode-card" onclick="switchMode('work')">
+          <svg class="mode-icon work-icon" viewBox="0 0 24 24">
+            <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
+          </svg>
+          <h3>Modo Trabalho</h3>
+        </div>
+
+        <div class="mode-card" onclick="switchMode('health')">
+          <svg class="mode-icon health-icon" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+          <h3>Modo Saúde</h3>
+        </div>
+
+        <div class="mode-card" onclick="switchMode('home')">
+          <svg class="mode-icon home-icon" viewBox="0 0 24 24">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>
+          <h3>Modo Casa</h3>
+        </div>
+
+        <div class="mode-card" onclick="switchMode('fun')">
+          <svg class="mode-icon fun-icon" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+          <h3>Modo Diversão</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Study Mode Screen -->
+    <div id="study-mode" class="screen">
+      <nav class="mode-nav">
+        <button onclick="showDashboard()">← Voltar</button>
+        <h2>Modo Estudo</h2>
+        <div class="timer-display">25:00</div>
+      </nav>
+
+      <div class="study-container">
+        <button class="quiz-link-button" onclick="startCWDQuiz()">
+          Acessar CWD Smart Quiz
+        </button>
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>Pomodoro Timer</h3>
+            <div class="pomodoro-container">
+              <div class="timer">
+                <div id="time-display">25:00</div>
+                <div class="timer-controls">
+                  <button id="start-timer">Iniciar</button>
+                  <button id="reset-timer">Resetar</button>
+                </div>
+              </div>
+              <div class="session-info">
+                <span id="session-count">Sessão: 1/4</span>
+                <span id="break-info">Próximo: Pausa Curta</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <h3>Flashcards</h3>
+            <div class="flashcards-container">
+              <div id="flashcard" class="flashcard">
+                <div class="flashcard-inner">
+                  <div class="flashcard-front">
+                    <p>Clique para adicionar uma pergunta</p>
+                  </div>
+                  <div class="flashcard-back">
+                    <p>Clique para adicionar uma resposta</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flashcard-controls">
+                <button onclick="addFlashcard()">Novo Flashcard</button>
+                <button onclick="reviewFlashcards()">Revisar</button>
+                <button onclick="previousFlashcard()">Anterior</button>
+                <button onclick="nextFlashcard()">Próximo</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <h3>Planejador de Estudos</h3>
+            <div class="planner-container">
+              <div class="schedule-grid">
+                <div class="time-slots">
+                  <div class="time-slot">08:00</div>
+                  <div class="time-slot">09:00</div>
+                  <div class="time-slot">10:00</div>
+                  <div class="time-slot">11:00</div>
+                </div>
+                <div class="subjects">
+                  <div class="subject-slot" draggable="true">Matemática</div>
+                  <div class="subject-slot" draggable="true">Português</div>
+                  <div class="subject-slot" draggable="true">História</div>
+                  <div class="subject-slot" draggable="true">Geografia</div>
+                </div>
+              </div>
+              <button onclick="addSubject()">Adicionar Matéria</button>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <h3>IA Educacional</h3>
+            <div class="ai-chat-container">
+              <div id="chat-messages" class="chat-messages">
+                <div class="message ai">
+                  Olá! Como posso ajudar com seus estudos hoje?
+                </div>
+              </div>
+              <div class="chat-input">
+                <input type="text" id="question-input" placeholder="Digite sua dúvida...">
+                <button onclick="askAI()">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Work Mode Screen -->
+    <div id="work-mode" class="screen">
+      <nav class="mode-nav">
+        <button onclick="showDashboard()">← Voltar</button>
+        <h2>Modo Trabalho</h2>
+      </nav>
+      
+      <div class="work-container">
+        <div class="tasks-section">
+          <h3>Tarefas</h3>
+          <form id="task-form">
+            <input type="text" id="task-title" placeholder="Título da Tarefa">
+            <textarea id="task-description" placeholder="Descrição"></textarea>
+            <input type="datetime-local" id="task-deadline">
+            <button type="button" onclick="addTask()">Adicionar Tarefa</button>
+          </form>
+          <div id="tasks-list"></div>
+        </div>
+
+        <div class="meetings-container">
+          <h3>Reuniões</h3>
+          <form id="meeting-form">
+            <input type="text" id="meeting-title" placeholder="Título da Reunião">
+            <input type="date" id="meeting-date">
+            <input type="time" id="meeting-time">
+            <input type="text" id="meeting-participants" placeholder="Participantes">
+            <button type="button" onclick="addMeeting()">Agendar Reunião</button>
+          </form>
+          <div id="meetings-list"></div>
+        </div>
+
+        <div class="colleagues-list">
+          <h3>Colegas</h3>
+          <form id="colleague-form">
+            <input type="text" id="colleague-name" placeholder="Nome">
+            <input type="text" id="colleague-position" placeholder="Cargo">
+            <input type="text" id="colleague-contact" placeholder="Contato">
+            <button type="button" onclick="addColleague()">Adicionar Colega</button>
+          </form>
+          <div id="colleagues-list"></div>
+        </div>
+
+        <div class="notes-container">
+          <h3>Anotações</h3>
+          <textarea id="work-notes" class="notes-textarea" placeholder="Digite suas anotações aqui..."></textarea>
+          <button onclick="saveNotes()">Salvar Anotações</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Health Mode Screen -->
+    <div id="health-mode" class="screen">
+      <nav class="mode-nav">
+        <button onclick="showDashboard()">← Voltar</button>
+        <h2>Modo Saúde</h2>
+      </nav>
+      
+      <div class="mode-container">
+        <div class="health-container">
+          <div class="health-card">
+            <h3>Água</h3>
+            <div class="health-stat">0/8</div>
+            <button onclick="trackWater()">+ Copo</button>
+          </div>
+          
+          <div class="health-card">
+            <h3>Exercícios</h3>
+            <div class="health-stat">0 min</div>
+            <button onclick="trackExercise()">+ Exercício</button>
+          </div>
+          
+          <div class="health-card">
+            <h3>Medicamentos</h3>
+            <form id="medication-form">
+              <input type="text" id="med-name" placeholder="Nome do Medicamento">
+              <input type="time" id="med-time1" placeholder="Horário 1">
+              <input type="time" id="med-time2" placeholder="Horário 2">
+              <input type="time" id="med-time3" placeholder="Horário 3">
+              <button type="button" onclick="addMedication()">Adicionar Medicamento</button>
+            </form>
+            <div id="medication-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home Mode Screen -->
+    <div id="home-mode" class="screen">
+      <nav class="mode-nav">
+        <button onclick="showDashboard()">← Voltar</button>
+        <h2>Modo Casa</h2>
+      </nav>
+      
+      <div class="mode-container">
+        <form id="shopping-form">
+          <input type="text" id="item-name" placeholder="Nome do Item">
+          <input type="text" id="item-description" placeholder="Descrição">
+          <input type="number" id="item-price" placeholder="Preço" step="0.01">
+          <button type="button" onclick="addShoppingItem()">Adicionar Item</button>
+        </form>
+
+        <table class="shopping-table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Descrição</th>
+              <th>Valor</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="shopping-list">
+            <!-- Items will be added here dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Fun Mode Screen -->
+    <div id="fun-mode" class="screen">
+      <nav class="mode-nav">
+        <button onclick="showDashboard()">← Voltar</button>
+        <h2>Modo Diversão</h2>
+      </nav>
+      
+      <div class="mode-container">
+        <div class="message-board">
+          <!-- Admin message will be displayed here -->
+        </div>
+
+        <div class="response-section">
+          <h3>Responder</h3>
+          <div class="chat-input">
+            <input type="text" placeholder="Digite sua resposta..." onkeypress="if(event.key === 'Enter') sendMessage()">
+            <button onclick="sendMessage()">Enviar</button>
+          </div>
+          <div class="chat-area">
+            <!-- User responses will appear here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

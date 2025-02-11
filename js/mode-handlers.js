@@ -741,17 +741,202 @@ export const subjects = [
     name: 'Matemática',
     questions: [
       {
-        question: "Qual é a fórmula de Bhaskara?",
-        options: [
-          "x = (-b ± √(b² - 4ac)) / 2a",
-          "E = mc²",
-          "a² + b² = c²",
-          "F = ma"
-        ],
-        correctAnswer: 0,
-        explanation: "A fórmula de Bhaskara é usada para resolver equações quadráticas."
-      }
-    ],
+        question: "Qual é a área de um triângulo com base de 8 cm e altura de 5 cm?",
+      options: ["20 cm²", "30 cm²", "40 cm²", "25 cm²"],
+      correct: 3
+    }, {
+      question: "Resolva: 3x + 2 = 11. Qual é o valor de x?",
+      options: ["2", "3", "4", "5"],
+      correct: 1
+    }, {
+      question: "Qual é o valor de 7²?",
+      options: ["14", "49", "21", "42"],
+      correct: 1
+    }, {
+      question: "Qual é o perímetro de um quadrado com lado de 6 cm?",
+      options: ["24 cm", "36 cm", "12 cm", "18 cm"],
+      correct: 0
+    }, {
+      question: "Resolva: 4x - 8 = 0. Qual é o valor de x?",
+      options: ["1", "2", "3", "4"],
+      correct: 1
+    }, {
+      question: "Qual é o valor de √64?",
+      options: ["6", "7", "8", "9"],
+      correct: 2
+    }, {
+      question: "Se um círculo tem um raio de 7 cm, qual é a sua área? (π ≈ 3,14)",
+      options: ["153,86 cm²", "140 cm²", "160 cm²", "170 cm²"],
+      correct: 0
+    }, {
+      question: "Resolva: 2(x - 3) = 8. Qual é o valor de x?",
+      options: ["5", "6", "7", "8"],
+      correct: 2
+    }, {
+      question: "Qual é a forma geométrica que possui 6 faces quadradas iguais?",
+      options: ["Cubo", "Cilindro", "Esfera", "Cone"],
+      correct: 0
+    }, {
+      question: "Quantos graus tem um ângulo reto?",
+      options: ["45°", "90°", "120°", "180°"],
+      correct: 1
+    }, {
+      question: "Qual é a soma dos ângulos internos de um triângulo?",
+      options: ["90°", "180°", "270°", "360°"],
+      correct: 1
+    }, {
+      question: "Quanto é 15% de 200?",
+      options: ["15", "30", "20", "25"],
+      correct: 1
+    }, {
+      question: "Qual é o valor de 3³?",
+      options: ["6", "9", "27", "81"],
+      correct: 2
+    }, {
+      question: "Quantos lados tem um hexágono?",
+      options: ["4", "5", "6", "7"],
+      correct: 2
+    }, {
+  question: "Resolva: 5x = 25. Qual é o valor de x?",
+      options: ["3", "4", "5", "6"],
+      correct: 2
+    }, {
+      question: "Qual é a fórmula da área de um círculo?",
+      options: ["πr", "2πr", "πr²", "2πr²"],
+      correct: 2
+    }, {
+      question: "Qual é a raiz quadrada de 81?",
+      options: ["7", "8", "9", "10"],
+      correct: 2
+    }, {
+      question: "Quanto é 100 ÷ 4?",
+      options: ["20", "25", "30", "40"],
+      correct: 1
+    }, {
+      question: "Um triângulo com dois lados iguais é chamado de:",
+      options: ["Equilátero", "Isósceles", "Escaleno", "Retângulo"],
+      correct: 1
+    }, {
+      question: "Quantos segundos há em uma hora?",
+      options: ["3600", "2400", "1800", "1200"],
+      correct: 0
+    }, {
+      question: "Qual é o menor número primo?",
+      options: ["0", "1", "2", "3"],
+      correct: 2
+    }, {
+      question: "Quanto é 7 x 8?",
+      options: ["48", "54", "56", "64"],
+      correct: 2
+    }, {
+      question: "Qual é o volume de um cubo com aresta de 5 cm?",
+      options: ["25 cm³", "100 cm³", "125 cm³", "150 cm³"],
+      correct: 2
+    }, {
+      question: "Qual é o valor de 2² + 3²?",
+      options: ["9", "13", "14", "18"],
+      correct: 1
+    }, {
+      question: "Quanto é 1/4 + 1/2?",
+      options: ["1/2", "3/4", "1", "5/4"],
+      correct: 1
+    }, {
+      question: "Se um retângulo tem 5 cm de largura e 10 cm de comprimento, qual é sua área?",
+      options: ["15 cm²", "25 cm²", "50 cm²", "75 cm²"],
+      correct: 2
+    }, {
+      question: "Quantos lados tem um dodecágono?",
+      options: ["8", "10", "12", "14"],
+      correct: 2
+    }, {
+      question: "Se x = 3, qual é o valor de 2x + 5?",
+      options: ["8", "9", "10", "11"],
+      correct: 3
+    }, {
+      question: "Qual é o nome da figura com 4 lados iguais e 4 ângulos retos?",
+      options: ["Quadrado", "Retângulo", "Losango", "Trapézio"],
+      correct: 0
+    }, {
+      question: "Quanto é 0,2 x 0,5?",
+      options: ["0,01", "0,1", "0,2", "0,25"],
+      correct: 3
+    }, {
+      question: "Qual é o maior divisor comum de 18 e 24?",
+      options: ["2", "3", "6", "9"],
+      correct: 2
+    }, {
+      question: "Quanto é 2⁵?",
+      options: ["16", "25", "32", "64"],
+      correct: 2
+    }, {
+      question: "Resolva: 10 - (2 + 3).",
+      options: ["3", "4", "5", "6"],
+      correct: 1
+    }, {
+      question: "Se 1 metro = 100 cm, quantos centímetros há em 2,5 metros?",
+      options: ["200 cm", "250 cm", "300 cm", "350 cm"],
+      correct: 1
+    }, {
+      question: "Quanto é 5! (fatorial de 5)?",
+      options: ["20", "60", "100", "120"],
+      correct: 3
+}, {
+      question: "Resolva: x/4 = 6. Qual é o valor de x?",
+      options: ["12", "16", "20", "24"],
+      correct: 3
+    }, {
+      question: "Quanto é a metade de 3/4?",
+      options: ["1/8", "3/8", "1/2", "5/8"],
+      correct: 1
+    }, {
+      question: "Qual é o nome do polígono com 8 lados?",
+      options: ["Pentágono", "Heptágono", "Octógono", "Decágono"],
+      correct: 2
+    }, {
+      question: "Qual é a área de um quadrado com lado de 9 cm?",
+      options: ["18 cm²", "36 cm²", "45 cm²", "81 cm²"],
+      correct: 3
+    }, {
+      question: "Resolva: 3² + 4².",
+      options: ["12", "16", "25", "32"],
+      correct: 2
+    }, {
+      question: "Quanto é 3/4 de 16?",
+      options: ["8", "10", "12", "14"],
+      correct: 2
+    }, {
+      question: "Qual é o valor de 100% de 50?",
+      options: ["25", "50", "75", "100"],
+      correct: 1
+    }, {
+      question: "Quanto é 1/3 + 1/6?",
+      options: ["1/6", "1/3", "1/2", "2/3"],
+      correct: 2
+    }, {
+      question: "Se um ângulo mede 45°, qual é o seu ângulo complementar?",
+      options: ["45°", "90°", "135°", "180°"],
+      correct: 0
+    }, {
+      question: "Qual é o valor de 8²?",
+      options: ["48", "56", "64", "72"],
+      correct: 2
+    }, {
+      question: "Quanto é 0,01 x 1000?",
+      options: ["0,1", "1", "10", "100"],
+      correct: 1
+    }, {
+      question: "Quantos minutos há em 1,5 horas?",
+      options: ["60", "75", "90", "120"],
+      correct: 2
+    }, {
+      question: "Resolva: 2x - 5 = 9. Qual é o valor de x?",
+      options: ["5", "6", "7", "8"],
+      correct: 2
+    }, {
+      question: "Quanto é 1² + 2² + 3²?",
+      options: ["9", "12", "14", "16"],
+      correct: 2
+    }],
     materials: [
       {
         title: "Álgebra Básica",
@@ -783,18 +968,127 @@ export const subjects = [
   {
     id: 'portugues',
     name: 'Português',
-    questions: [
-      {
-        question: "O que são figuras de linguagem?",
-        options: [
-          "Recursos estilísticos que enriquecem a expressão",
-          "Regras gramaticais",
-          "Sinais de pontuação",
-          "Tipos de verbos"
-        ],
-        correctAnswer: 0
-      }
-    ],
+    question: "Identifique o substantivo abstrato na frase: 'A felicidade é uma conquista diária.'",
+      options: ["Felicidade", "Conquista", "Diária", "Nenhuma das anteriores"],
+      correct: 0
+    }, {
+      question: "Qual é a função da palavra 'rápido' em: 'Ele foi rápido para concluir a tarefa.'?",
+      options: ["Substantivo", "Adjetivo", "Verbo", "Advérbio"],
+      correct: 1
+    }, {
+      question: "Qual é o plural de 'pão'?",
+      options: ["Pães", "Pãos", "Pões", "Paes"],
+      correct: 0
+    }, {
+      question: "Complete a frase: 'Eu ________ estudar mais.'",
+      options: ["devemos", "deveria", "dever", "deverei"],
+      correct: 1
+    }, {
+      question: "Qual das frases contém uma metáfora?",
+      options: ["Ele é forte como um leão", "A vida é um palco", "Estava tão feliz que parecia flutuar", "Estava tão quente quanto o deserto"],
+      correct: 1
+    }, {
+      question: "Qual é o sujeito na frase: 'Os alunos estudam para o exame final'?",
+      options: ["Os alunos", "Estudam", "Exame final", "Para o exame"],
+      correct: 0
+    }, {
+      question: "Classifique a oração: 'Quando cheguei, ele já tinha saído.'",
+      options: ["Coordenada", "Subordinada", "Simples", "Nominal"],
+      correct: 1
+    }, {
+      question: "Identifique o verbo transitivo direto: 'Ela comprou um livro novo.'",
+      options: ["Ela", "Comprou", "Livro", "Novo"],
+      correct: 1
+    }, {
+      question: "Qual é o tempo verbal de 'Nós estudaremos juntos amanhã'?",
+      options: ["Presente", "Passado", "Futuro do Presente", "Futuro do Pretérito"],
+      correct: 2
+    }, {
+      question: "O que é uma interjeição?",
+      options: ["Palavra que expressa emoção ou sentimento", "Palavra que liga orações", "Palavra que determina o verbo", "Palavra que indica lugar"],
+      correct: 0
+    }, {
+      question: "Qual é o sujeito na frase: 'Os alunos estudam na biblioteca.'?",
+      options: ["Os alunos", "Estudam", "Na biblioteca", "Os alunos estudam"],
+      correct: 0
+    }, {
+      question: "Qual é o tipo de predicado na frase: 'A menina é inteligente.'?",
+      options: ["Verbal", "Nominal", "Verbo-nominal", "Predicativo"],
+      correct: 1
+    }, {
+      question: "Qual é o plural de 'cidadão'?",
+      options: ["Cidadões", "Cidadãos", "Cidades", "Cidadãoses"],
+      correct: 1
+    }, {
+      question: "Qual é o antônimo de 'feliz'?",
+      options: ["Triste", "Contente", "Alegre", "Descontraído"],
+      correct: 0
+    }, {
+      question: "O que é um texto dissertativo argumentativo?",
+      options: ["Um texto que narra fatos", "Um texto que descreve pessoas", "Um texto que apresenta argumentos para defender uma tese", "Um texto que explica um processo"],
+      correct: 2
+    }, {
+      question: "Qual é o significado da palavra 'procrastinar'?",
+      options: ["Antecipar", "Adiar", "Resolver", "Confirmar"],
+      correct: 1
+    }, {
+      question: "Qual é a figura de linguagem usada na frase: 'O vento sussurrava entre as árvores'?",
+      options: ["Metáfora", "Personificação", "Ironia", "Eufemismo"],
+      correct: 1
+    }, {
+      question: "Qual é o verbo da frase: 'Nós compramos um presente ontem'?",
+      options: ["Compramos", "Um", "Presente", "Ontem"],
+      correct: 0
+    }, {
+      question: "Qual é o significado da expressão 'ficar de molho'?",
+      options: ["Tomar banho", "Estar em repouso", "Estar cozinhando", "Estar em apuros"],
+      correct: 1
+    }, {
+      question: "O que indica o prefixo 're-' na palavra 'rever'?",
+      options: ["Novidade", "Repetição", "Contrário", "Positividade"],
+      correct: 1
+    }, {
+      question: "Qual é o tempo verbal na frase: 'Eles estavam brincando no parque.'?",
+      options: ["Presente", "Pretérito perfeito", "Pretérito imperfeito", "Futuro do presente"],
+      correct: 2
+    }, {
+      question: "Qual é o gênero do substantivo 'análise'?",
+      options: ["Masculino", "Feminino", "Neutro", "Ambíguo"],
+      correct: 1
+    }, {
+      question: "Qual é a função da vírgula na frase: 'João, venha aqui agora.'?",
+      options: ["Separar termos iguais", "Indicar uma pausa", "Separar o vocativo", "Marcar uma enumeração"],
+      correct: 2
+    }, {
+      question: "Qual é a classificação da palavra 'felizmente'?",
+      options: ["Substantivo", "Adjetivo", "Advérbio", "Verbo"],
+      correct: 2
+    }, {
+      question: "Qual é o termo que complementa o verbo na frase: 'Nós assistimos ao filme.'?",
+      options: ["Objeto direto", "Objeto indireto", "Adjunto adverbial", "Sujeito"],
+      correct: 1
+    }, {
+      question: "Qual é o tipo de discurso usado na frase: 'Maria disse: 'Eu não quero ir ao parque'.'?",
+      options: ["Discurso direto", "Discurso indireto", "Discurso indireto livre", "Discurso narrativo"],
+      correct: 0
+    }, {
+      question: "Qual é o significado da palavra 'altruísmo'?",
+      options: ["Egoísmo", "Solidariedade", "Alegria", "Indiferença"],
+      correct: 1
+    }, {
+      question: "Qual é a figura de linguagem em 'Ele era forte como um touro'?",
+      options: ["Metáfora", "Comparação", "Ironia", "Personificação"],
+      correct: 1
+    }, {
+      question: "Qual é o plural de 'caráter'?",
+      options: ["Caráteres", "Caratares", "Carateis", "Caratazes"],
+      correct: 0
+    }, {
+      question: "Qual é o sinônimo de 'cômico'?",
+      options: ["Trágico", "Engraçado", "Sério", "Neutro"],
+      correct: 1
+    }],
+
     materials: [
       {
         title: "Literatura e Linguagem",
@@ -825,18 +1119,160 @@ export const subjects = [
   {
     id: 'biologia',
     name: 'Biologia',
-    questions: [
-      {
-        question: "O que é fotossíntese?",
-        options: [
-          "Processo de produção de energia usando luz solar",
-          "Processo de digestão celular",
-          "Divisão celular",
-          "Reprodução bacteriana"
-        ],
-        correctAnswer: 0
-      }
-    ],
+    biologia: [{
+      question: "Qual é a unidade básica da vida?",
+      options: ["Célula", "Tecido", "Órgão", "Organismo"],
+      correct: 0
+    }, {
+      question: "Qual é o processo pelo qual as plantas produzem seu próprio alimento?",
+      options: ["Respiração celular", "Fotossíntese", "Fermentação", "Transpiração"],
+      correct: 1
+    }, {
+      question: "Qual organela celular é responsável pela produção de energia?",
+      options: ["Cloroplasto", "Mitocôndria", "Ribossomo", "Núcleo"],
+      correct: 1
+    }, {
+      question: "Qual é a principal função do DNA?",
+      options: ["Produzir energia", "Carregar informações genéticas", "Destruir toxinas", "Transportar oxigênio"],
+      correct: 1
+    }, {
+      question: "Qual é o reino dos fungos?",
+      options: ["Animalia", "Fungi", "Plantae", "Protista"],
+      correct: 1
+    }, {
+      question: "Qual é o processo de divisão celular que resulta em duas células idênticas?",
+      options: ["Mitose", "Meiose", "Citocinese", "Bipartição"],
+      correct: 0
+    }, {
+      question: "Qual é o nome do pigmento responsável pela coloração verde das plantas?",
+      options: ["Hemoglobina", "Melanina", "Clorofila", "Carotenoide"],
+      correct: 2
+    }, {
+      question: "Qual é a principal função dos glóbulos vermelhos no sangue?",
+      options: ["Defender o corpo contra doenças", "Transportar oxigênio", "Coagular o sangue", "Produzir hormônios"],
+      correct: 1
+    }, {
+      question: "Qual é a estrutura responsável pelo transporte de água nas plantas?",
+      options: ["Floema", "Xilema", "Estômato", "Raiz"],
+      correct: 1
+    }, {
+      question: "Qual é o tipo de reprodução que não envolve a fusão de gametas?",
+      options: ["Sexuada", "Assexuada", "Parasitária", "Hermafrodita"],
+      correct: 1
+    }, {
+      question: "Qual é o principal gás liberado na fotossíntese?",
+      options: ["Dióxido de carbono", "Oxigênio", "Nitrogênio", "Hidrogênio"],
+      correct: 1
+    }, {
+      question: "Qual parte do sistema nervoso é responsável pelos reflexos?",
+      options: ["Cérebro", "Medula espinhal", "Nervos periféricos", "Cerebelo"],
+      correct: 1
+    }, {
+      question: "Qual é o nome do processo pelo qual o RNA é convertido em proteína?",
+      options: ["Replicação", "Transcrição", "Tradução", "Mutação"],
+      correct: 2
+    }, {
+      question: "Qual é a função dos lisossomos na célula?",
+      options: ["Produzir energia", "Digirir substâncias", "Armazenar água", "Sintetizar proteínas"],
+      correct: 1
+    }, {
+      question: "Qual é o tecido responsável pelo transporte de nutrientes nas plantas?",
+      options: ["Xilema", "Floema", "Estômato", "Meristema"],
+      correct: 1
+    }, {
+      question: "Qual é o nome do processo em que uma célula engole partículas externas?",
+      options: ["Exocitose", "Endocitose", "Pinocitose", "Fagocitose"],
+      correct: 3
+    }, {
+      question: "Qual é o tipo de célula que não possui núcleo definido?",
+      options: ["Procarionte", "Eucarionte", "Animal", "Vegetal"],
+      correct: 0
+    }, {
+      question: "Qual é a molécula que fornece energia para as células?",
+      options: ["ATP", "DNA", "RNA", "Proteína"],
+      correct: 0
+    }, {
+      question: "Qual é o nome da fase do ciclo celular em que o DNA é duplicado?",
+      options: ["Mitose", "Interfase", "Meiose", "Citocinese"],
+      correct: 1
+    }, {
+      question: "Qual é a função dos ribossomos?",
+      options: ["Produzir proteínas", "Transportar oxigênio", "Armazenar energia", "Sintetizar lipídios"],
+      correct: 0
+    }, {
+      question: "Qual é a estrutura que protege as células vegetais?",
+      options: ["Membrana plasmática", "Parede celular", "Núcleo", "Vacuolo"],
+      correct: 1
+    }, {
+      question: "Qual é a base nitrogenada exclusiva do RNA?",
+      options: ["Adenina", "Timina", "Uracila", "Guanina"],
+      correct: 2
+    }, {
+      question: "Qual é o grupo taxonômico mais específico?",
+      options: ["Reino", "Filo", "Gênero", "Espécie"],
+      correct: 3
+    }, {
+      question: "Qual é a função dos estômatos nas plantas?",
+      options: ["Absorver nutrientes", "Permitir trocas gasosas", "Transportar água", "Armazenar energia"],
+      correct: 1
+    }, {
+      question: "Qual é o nome da molécula que carrega os genes?",
+      options: ["RNA", "DNA", "Proteína", "ATP"],
+      correct: 1
+    }, {
+      question: "Qual é o principal produto da fermentação alcoólica?",
+      options: ["Água", "Álcool etílico", "Ácido lático", "Oxigênio"],
+      correct: 1
+    }, {
+      question: "Qual é o principal componente da parede celular das plantas?",
+      options: ["Quitina", "Celulose", "Amido", "Proteína"],
+      correct: 1
+    }, {
+      question: "Qual é o reino dos organismos unicelulares eucariontes?",
+      options: ["Fungi", "Protista", "Plantae", "Animalia"],
+      correct: 1
+    }, {
+      question: "Qual é o nome do processo em que o DNA se transforma em RNA?",
+      options: ["Transcrição", "Tradução", "Replicação", "Mutação"],
+      correct: 0
+    }, {
+      question: "Qual é a parte do olho humano que detecta luz?",
+      options: ["Iris", "Córnea", "Retina", "Cristalino"],
+      correct: 2
+    }, {
+      question: "O que é biodiversidade?",
+      options: ["Diversidade de climas", "Diversidade de espécies", "Quantidade de organismos", "Número de habitats"],
+      correct: 1
+    }, {
+      question: "Qual é o principal órgão do sistema respiratório humano?",
+      options: ["Coração", "Pulmões", "Diafragma", "Traqueia"],
+      correct: 1
+    }, {
+      question: "O que significa 'homeostase'?",
+      options: ["Desequilíbrio interno", "Estabilidade do ambiente interno", "Troca de gases", "Crescimento celular"],
+      correct: 1
+    }, {
+      question: "Qual é o nome da molécula que armazena energia nos músculos?",
+      options: ["ATP", "Glicose", "Ácido lático", "Creatina"],
+      correct: 3
+    }, {
+      question: "Qual é o órgão responsável pela filtragem do sangue no corpo humano?",
+      options: ["Coração", "Rins", "Pulmões", "Estômago"],
+      correct: 1
+    }, {
+      question: "Qual é a função do sistema linfático?",
+      options: ["Transportar nutrientes", "Defender o corpo contra infecções", "Produzir energia", "Filtrar toxinas"],
+      correct: 1
+    }, {
+      question: "Qual é o nome do tecido muscular presente no coração?",
+      options: ["Muscular liso", "Muscular cardíaco", "Muscular esquelético", "Muscular voluntário"],
+      correct: 1
+    }, {
+      question: "Qual é o nome da estrutura que conecta os músculos aos ossos?",
+      options: ["Ligamentos", "Tendões", "Cartilagem", "Articulações"],
+      correct: 1
+      }],
+      
     materials: [
       {
         title: "Biologia Celular",

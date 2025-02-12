@@ -740,17 +740,28 @@ export const subjects = [
     id: 'matematica',
     name: 'Matemática',
     questions: [
-      {
+    {
         question: "Qual é a fórmula de Bhaskara?",
-        options: [
-          "x = (-b ± √(b² - 4ac)) / 2a",
-          "E = mc²",
-          "a² + b² = c²",
-          "F = ma"
-        ],
+        options: ["x = (-b ± √(b² - 4ac)) / 2a", "E = mc²", "a² + b² = c²", "F = ma"],
         correctAnswer: 0,
         explanation: "A fórmula de Bhaskara é usada para resolver equações quadráticas."
-      }
+    }, {
+      question: "Qual é a área de um triângulo com base de 8 cm e altura de 5 cm?",
+      options: ["20 cm²", "30 cm²", "40 cm²", "25 cm²"],
+      correct: 3
+    }, {
+      question: "Resolva: 3x + 2 = 11. Qual é o valor de x?",
+      options: ["2", "3", "4", "5"],
+      correct: 1
+    }, {
+      question: "Qual é o valor de 7²?",
+      options: ["14", "49", "21", "42"],
+      correct: 1
+    }, {
+      question: "Qual é o perímetro de um quadrado com lado de 6 cm?",
+      options: ["24 cm", "36 cm", "12 cm", "18 cm"],
+      correct: 0
+    }
     ],
     materials: [
       {

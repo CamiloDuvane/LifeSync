@@ -727,7 +727,7 @@ export function askAI() {
 }
 
 export function openCWDQuiz() {
-  window.open('https://websim.ai/@Camilo/cwd-smart-quiz/quiz', '_blank');
+  window.open('https://camiloduvane.github.io/LifeSync/', '_blank');
 }
 
 // Quiz state and data
@@ -740,7 +740,12 @@ export const subjects = [
     id: 'matematica',
     name: 'Matemática',
     questions: [
-    {
+   {
+      question: "Qual é a área de um triângulo com base de 8 cm e altura de 5 cm?",
+      options: ["20 cm²", "30 cm²", "40 cm²", "25 cm²"],
+      ccorrectAnswer: 3,
+      explanation: "A fórmula de Bhaskara é usada para resolver equações quadráticas."
+    }, {
       question: "Qual é a fórmula de Bhaskara?",
       options: ["x = (-b ± √(b² - 4ac)) / 2a", "E = mc²", "a² + b² = c²", "F = ma"],
       correctAnswer: 0,
